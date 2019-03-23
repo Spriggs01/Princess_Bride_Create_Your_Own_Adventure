@@ -10,6 +10,8 @@ namespace Princess_Bride
     {
         static void Main(string[] args)
         {
+            ProgramUI program = new ProgramUI();
+            program.Run();
         }
     }
 }
