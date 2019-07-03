@@ -10,33 +10,41 @@ namespace Princess_Bride
     {
         public void Run()
         {
-            bool running = true;
-            while (running)
+            try
             {
-                Console.Clear();
-
-                Console.WriteLine(@"(  _ \(  _ \(  )(  ( \ / __)(  __)/ ___)/ ___)  (  _ \(  _ \(  )(    \(  __) ");
-                Console.WriteLine(@" ) __/ )   / )( /    /( (__  ) _) \___ \\___ \   ) _ ( )   / )(  ) D ( ) _)  ");
-                Console.WriteLine(@"(__)  (__\_)(__)\_)__) \___)(____)(____/(____/  (____/(__\_)(__)(____/(____) ");
-                Console.WriteLine(@"  __   ____  _  _  ____  __ _  ____  _  _  ____  ____                        ");
-                Console.WriteLine(@" / _\ (    \/ )( \(  __)(  ( \(_  _)/ )( \(  _ \(  __)                       ");
-                Console.WriteLine(@"/    \ ) D (\ \/ / ) _) /    /  )(  ) \/ ( )   / ) _)                        ");
-                Console.WriteLine(@"\_/\_/(____/ \__/ (____)\_)__) (__) \____/(__\_)(____)                       ");
-
-                Console.Write("\n" +
-                    "1. Start Adventure\n" +
-                    "2. Exit Application\n");
-
-                int choice = int.Parse(Console.ReadLine());
-                switch (choice)
+                bool running = true;
+                while (running)
                 {
-                    case 1:
-                        Introduction();
-                        break;
-                    case 2:
-                        running = false;
-                        break;
+                    Console.Clear();
+
+                    Console.WriteLine(@"(  _ \(  _ \(  )(  ( \ / __)(  __)/ ___)/ ___)  (  _ \(  _ \(  )(    \(  __) ");
+                    Console.WriteLine(@" ) __/ )   / )( /    /( (__  ) _) \___ \\___ \   ) _ ( )   / )(  ) D ( ) _)  ");
+                    Console.WriteLine(@"(__)  (__\_)(__)\_)__) \___)(____)(____/(____/  (____/(__\_)(__)(____/(____) ");
+                    Console.WriteLine(@"  __   ____  _  _  ____  __ _  ____  _  _  ____  ____                        ");
+                    Console.WriteLine(@" / _\ (    \/ )( \(  __)(  ( \(_  _)/ )( \(  _ \(  __)                       ");
+                    Console.WriteLine(@"/    \ ) D (\ \/ / ) _) /    /  )(  ) \/ ( )   / ) _)                        ");
+                    Console.WriteLine(@"\_/\_/(____/ \__/ (____)\_)__) (__) \____/(__\_)(____)                       ");
+
+                    Console.Write("\n" +
+                        "1. Start Adventure\n" +
+                        "2. Exit Application\n");
+
+                    int choice = int.Parse(Console.ReadLine());
+                    switch (choice)
+                    {
+                        case 1:
+                            Introduction();
+                            break;
+                        case 2:
+                            running = false;
+                            break;
+                    }
                 }
+            } catch (Exception e)
+            {
+                Console.WriteLine("Inconceivable! You Died! Please start again");
+                Console.ReadLine();
+                Run();
             }
         }
 
