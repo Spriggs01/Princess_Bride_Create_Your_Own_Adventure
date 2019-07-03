@@ -56,6 +56,7 @@ namespace Princess_Bride
                 "\n" +
                 "1. Climb the ladder after him.\n" +
                 "2. Seek an alternate route to the top.");
+            
             int choice = int.Parse(Console.ReadLine());
             switch (choice)
             {
@@ -65,6 +66,12 @@ namespace Princess_Bride
                 case 2:
                     AlternateRoute();
                     break;
+                default:
+                    Console.WriteLine("Inconceivable! Try again!");
+                    Console.ReadLine();
+                    Introduction();
+                    break;
+                    
             }
         }
 
@@ -88,6 +95,11 @@ namespace Princess_Bride
                         break;
                     case 2:
                         running = false;
+                        break;
+                    default:
+                        Console.WriteLine("Sorry Mate, but you are certainly still dead!You must make a choice.");
+                        Console.ReadLine();
+                        AlternateRoute();
                         break;
                 }
             }
@@ -113,6 +125,12 @@ namespace Princess_Bride
                 case 2:
                     FightInigo();
                     break;
+                default:
+                    Console.WriteLine("Inconceivable! Try again!");
+                    Console.ReadLine();
+                    ClimbTheLadder();
+                    break;
+
             }
 
         }
@@ -138,6 +156,11 @@ namespace Princess_Bride
                     case 2:
                         running = false;
                         break;
+                    default:
+                        Console.WriteLine("Inigo totally killed you! Restart or Return to Main Menu? I.E. choose 1 or 2!");
+                        Console.ReadLine();
+                        SurrenderToInigo();
+                        break;
                 }
             }
         }
@@ -162,6 +185,11 @@ namespace Princess_Bride
                 case 2:
                     PunchAndre();
                     break;
+                default:
+                    Console.WriteLine("No other choices! Inconceivable!");
+                    Console.ReadLine();
+                    FightInigo();
+                    break;
             }
         }
 
@@ -185,6 +213,11 @@ namespace Princess_Bride
                         break;
                     case 2:
                         running = false;
+                        break;
+                    default:
+                        Console.WriteLine("Well, ummm, you are dead! So, no other choices mate! I.E. choose 1 or 2 !");
+                        Console.ReadLine();
+                        PunchAndre();
                         break;
                 }
             }
@@ -211,6 +244,11 @@ namespace Princess_Bride
                 case 2:
                     SurvivePoison();
                     break;
+                default:
+                    Console.WriteLine("Inconceivable! You only have 2 choices!");
+                    Console.ReadLine();
+                    ChokeAndre();
+                    break;
             }
         }
 
@@ -234,6 +272,11 @@ namespace Princess_Bride
                     break;
                 case 2:
                     TheFireSwamp();
+                    break;
+                default:
+                    Console.WriteLine("Inconceivable! Try again!");
+                    Console.ReadLine();
+                    SurvivePoison();
                     break;
             }
         }
@@ -259,6 +302,11 @@ namespace Princess_Bride
                     case 2:
                         running = false;
                         break;
+                    default:
+                        Console.WriteLine("You died! No other choices! 1 or 2?");
+                        Console.ReadLine();
+                        FightSoldiers();
+                        break;
                 }
             }
         }
@@ -281,6 +329,11 @@ namespace Princess_Bride
                     break;
                 case 2:
                     SaveButtercup();
+                    break;
+                default:
+                    Console.WriteLine("Inconceivable! Only 2 choices mate!");
+                    Console.ReadLine();
+                    TheFireSwamp();
                     break;
             }
         }
@@ -306,6 +359,11 @@ namespace Princess_Bride
                     case 2:
                         running = false;
                         break;
+                    default:
+                        Console.WriteLine("Inconceivable! Try again!");
+                        Console.ReadLine();
+                        FindSword();
+                        break;
                 }
             }
         }
@@ -330,6 +388,11 @@ namespace Princess_Bride
                     break;
                 case 2:
                     SurrenderToHumperdinck();
+                    break;
+                default:
+                    Console.WriteLine("Inconceivable! Either Surrender or save your lady!");
+                    Console.ReadLine();
+                    SaveButtercup();
                     break;
             }
         }
@@ -369,6 +432,11 @@ namespace Princess_Bride
                 case 2:
                     SomethingCreative();
                     break;
+                default:
+                    Console.WriteLine("You have no other choices!");
+                    Console.ReadLine();
+                    SurrenderToHumperdinck();
+                    break;
             }
         }
 
@@ -392,6 +460,11 @@ namespace Princess_Bride
                         break;
                     case 2:
                         running = false;
+                        break;
+                    default:
+                        Console.WriteLine("You are definitely dead! 1 or 2?");
+                        Console.ReadLine();
+                        SendFezzikAndInigo();
                         break;
                 }
             }
@@ -430,6 +503,11 @@ namespace Princess_Bride
                 case 2:
                     FightHumperdinck();
                     break;
+                default:
+                    Console.WriteLine("Inconceivable! Either insult like a man or fight like a man!");
+                    Console.ReadLine();
+                    SomethingCreative();
+                    break;
             }
 
         }
@@ -455,6 +533,11 @@ namespace Princess_Bride
                     case 2:
                         running = false;
                         break;
+                    default:
+                        Console.WriteLine("HAHAHAHA! Inconceivable! 1 or 2?");
+                        Console.ReadLine();
+                        FightHumperdinck();
+                        break;
                 }
             }
         }
@@ -468,10 +551,29 @@ namespace Princess_Bride
                 "\n" +
                 "The four of you escape the castle and Inigo and Fezzik go their own way. You and Buttercup live happily ever after.\n" +
                 "\n" +
-                "What would you like to do?\n" +
-                "\n" +
-                "1. Restart Adventure\n" +
-                "2. Return to Menu");
+                "Press any key for the ending.");
+
+                
+                Console.Clear();
+
+            Console.WriteLine(@" ________             _______      _______    _         ______     _   _ ");
+            Console.WriteLine(@" \__  __/ |\     /|  (  ____ \    (  ____ \  ( (    /| ( __   \   ( ) ( )");
+            Console.WriteLine(@"   ) (    | )   ( |  | (    \/    | (    \/  |  \  ( | | (  \  )  | | | | ");
+            Console.WriteLine(@"   | |    | (___) |  | (__        | (__      |   \ | | | |   ) |  | | | | ");
+            Console.WriteLine(@"   | |    |  ___  |  |  __)       |  __)     | (\ \) | | |   | |  | | | | ");
+            Console.WriteLine(@"   | |    | (   ) |  | (          | (        | | \   | | |   ) |  (_) (_)  ");
+            Console.WriteLine(@"   | |    | )   ( |  | (____/\    | (____ /\ | )  \  | | (__ / )   _   _   ");
+            Console.WriteLine(@"   )_(    |/     \|  (_______ /   (_______ / |/    )_) (______ /  (_) (_)  ");
+
+
+
+
+
+
+
+
+
+
         }
     }
 
